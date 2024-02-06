@@ -4,7 +4,7 @@ import Card from "../components/card";
 export default function ComplexDashboard() {
   return (
     <Card>
-      <h1>Complex Dashboard</h1>
+      <h1>Complex Dashboard Tests</h1>
     </Card>
   );
 }
