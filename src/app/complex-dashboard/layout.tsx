@@ -1,19 +1,23 @@
 import Notifications from "./@notifications/page";
 import Revenue from "./@revenue/page";
 import Users from "./@users/page";
+import Login from "./@login/page";
 
 export default function DashboardLayout({
   children,
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = true;
+  return isLoggedIn ? (
     <>
       {/* 
       * This is the traditional method to import a component in layout page
@@ -32,6 +36,10 @@ export default function DashboardLayout({
           <div style={{ display: "flex", flex: 1 }}>{notifications}</div>
         </div>
       </div>
+    </>
+  ) : (
+    <>
+      <div>{login}</div>
     </>
   );
 }
